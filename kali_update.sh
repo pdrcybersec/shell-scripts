@@ -6,7 +6,7 @@
 # Script description: Performs a Kali Linux dist-upgrade using apt
 # from all configured sources in /etc/apt/sources.list      
 # Creator: prdcybersec
-# License: BSD 2-Cluase "Simplified" License
+# License: BSD 2-Clause "Simplified" License
 # Version: 1.0
 # Date: 10/25/2020
 
