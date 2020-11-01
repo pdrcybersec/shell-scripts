@@ -16,8 +16,8 @@ clear
 ## Debugging ##
 
 # Redirects bash script output to syslog.
-echo "# Redirecting stout and stder error to /var/log/syslog."
-exec 1> >(logger -s -t "$(basename "$0")") 2>&1
+# echo "# Redirecting stout and stder error to /var/log/syslog."
+# exec 1> >(logger -s -t "$(basename "$0")") 2>&1
 
 # Write custom message to syslog.
 echo "# Writing custom message to /var/log/syslog:"
@@ -37,8 +37,7 @@ logger -p local0.notice -t "${0##*/}[$$]" kali_update.sh started.
 # -u option causes the bash shell to treat unset variables as an error and exit
 # -o option sets the exit code of a pipeline to that of the rightmost command
 # to exit with a non-zero status, or to zero if all commands of the pipeline
-# exit successfully.
-# immediately.
+# exit successfully immediately.
 set -euo pipefail
 
 # trap command to intercept a fatal signal, perform cleanup, then exit.
